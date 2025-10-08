@@ -5,16 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix - Contact</title>
   </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
   <body>
     <h1>drop a contact information</h1>
-    <form>
-      <label>Fullname</label>
-      <input type="text" placeholder="Fullname" />
-      <label>Email</label>
-      <input type="Email" placeholder="Email" />
-      <label>Description</label>
-      <input type="Message" placeholder="Message" />
-      <button>Submit</button>
-    </form>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
   </body>
 </html>
